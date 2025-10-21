@@ -3,12 +3,12 @@ import pandas as pd
 # path to csv file:
 CSV_PATH = "/Users/lindahansson/Desktop/Gruppuppgift_1/data/ecommerce_sales.csv"
 
+df = pd.read_csv(CSV_PATH) # csv in to dataframe
+df.columns = df.columns.str.strip() # remove whitespaces
+
 def revenue_per_city(csv_path=CSV_PATH):
-    df = pd.read_csv(csv_path) # csv in to dataframe
-    df.columns = df.columns.str.strip() # remove whitespaces
-
-
-     # group by city and sum revenue, sorted descending
+    
+    # group by city and sum revenue, sorted descending
     city_revenue = (
         df.groupby('city')['revenue']
             .sum()
