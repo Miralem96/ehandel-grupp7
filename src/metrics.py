@@ -50,12 +50,12 @@ if __name__ == "__main__":
    
 
 
-print("\nAlla städer och intäkt: ")
-print(city_rev_df)
-print(f"\nMedelintäkt: {mean_revenue:.2f}")
-print(f"Standardavvikelse: {std_revenue:.2f}")   
-print(type(city_rev))  
-print(type(df))   
+    print("\nAlla städer och intäkt: ")
+    print(city_rev_df)
+    print(f"\nMedelintäkt: {mean_revenue:.2f}")
+    print(f"Standardavvikelse: {std_revenue:.2f}")   
+    print(type(city_rev))  
+    print(type(df))   
 
   
 
