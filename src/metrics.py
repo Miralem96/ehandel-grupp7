@@ -22,7 +22,7 @@ if __name__ == "__main__":
     std_revenue = df['revenue'].std()
 
     fig, ax = plt.subplots()
-    ax.bar(city_rev_df['city'], city_rev_df['revenue'], color='pink',  width=0.4)
+    ax.bar(city_rev_df['city'], city_rev_df['revenue'], color='pink',  width=0.5, edgecolor='black')
     ax.text(
         0.95, 0.95,
         f"Medelvärde: {mean_revenue:.2f}\nStd-avvikelse: {std_revenue:.2f}",
