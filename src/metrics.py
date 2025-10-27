@@ -12,7 +12,7 @@ def revenue_per_city(csv_path=CSV_PATH):  # function to calculate total revenue 
             .sum()                        # sum revenue values
             .sort_values(ascending=False) # sort result decending
     )
-    return city_revenue, df
+    return city_revenue
 
 def plot_revenue_per_city(city_rev_df, mean_revenue, std_revenue):
     fig, ax = plt.subplots(figsize=(8, 5))  # create figure and axis for the bar chart
@@ -40,7 +40,7 @@ def plot_revenue_per_city(city_rev_df, mean_revenue, std_revenue):
     print(f"\nMedelintäkt: {mean_revenue:.2f}")
     print(f"Standardavvikelse: {std_revenue:.2f}")   
     
-city_rev, df = revenue_per_city()
+city_rev = revenue_per_city()
 city_rev_df = city_rev.reset_index()
 mean_revenue = df['revenue'].mean()
 std_revenue = df['revenue'].std()
