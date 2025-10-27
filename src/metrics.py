@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-CSV_PATH = "/Users/lindahansson/Desktop/Gruppuppgift_1/data/ecommerce_sales.csv"
+CSV_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "ecommerce_sales.csv")
 
 df = pd.read_csv(CSV_PATH) 
 df.columns = df.columns.str.strip()  # remove whitepaces
