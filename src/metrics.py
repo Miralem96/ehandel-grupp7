@@ -14,15 +14,12 @@ def revenue_per_city(csv_path=CSV_PATH):  # function to calculate total revenue 
     )
     return city_revenue, df
 
-if __name__ == "__main__": 
-    city_rev, df = revenue_per_city()     # Get revenue by city and DataFrame
-    city_rev_df = city_rev.reset_index()  # convert Series to df
-
-    mean_revenue = df['revenue'].mean()   # calculate mean revenue
-    std_revenue = df['revenue'].std()     # calculate standard deviation of revenue
-
-    fig, ax = plt.subplots()              # create figure and axis for the bar chart
-    ax.bar(city_rev_df['city'], city_rev_df['revenue'], color='skyblue',  width=0.5, edgecolor='black')
+def plot_revenue_per_city(city_rev_df, mean_revenue, std_revenue):
+    """Plot revenue per city as a bar chart"""
+    fig, ax = plt.subplots()
+    ax.bar(city_rev_df['city'], city_rev_df['revenue'],
+           color='skyblue', width=0.5, edgecolor='black')
+    
     ax.text(                              # text box showing mean and standard deviation
         0.95, 0.95,
         f"Medelvärde: {mean_revenue:.2f}\nStd-avvikelse: {std_revenue:.2f}",
@@ -48,7 +45,7 @@ if __name__ == "__main__":
     print(city_rev_df)
     print(f"\nMedelintäkt: {mean_revenue:.2f}")
     print(f"Standardavvikelse: {std_revenue:.2f}")   
-    print(type(city_rev))  
+    print(type(city_rev_df))  
     print(type(df))   
 
   
