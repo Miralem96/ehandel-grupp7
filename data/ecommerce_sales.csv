@@ -2498,4 +2498,8 @@ order_id,date,city,category,price,units,revenue
 102496,2024-01-24,Uppsala,Clothing,134.86,5,674.3
 102497,2024-05-17,Stockholm,Electronics,546.5,2,1093.0
 102498,2024-04-21,Göteborg,Sports,646.99,4,2587.96
+<<<<<<< HEAD
 102499,2024-04-20,Stockholm,Home,473.83,3,1421.49
+=======
+102499,2024-04-20,Stockholm,Home,473.83,3,1421.49
+>>>>>>> feat/miralem
