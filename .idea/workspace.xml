@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a359ae76-9d1e-4339-8e0b-c621647ad499" name="Changes" comment="Updated .csv file" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feat/markusbranch" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;markusgunnar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Miralem96/ehandel-grupp7.git&quot;,
+    &quot;accountId&quot;: &quot;c2910206-3a80-4741-98f4-8b85e1f3b509&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="348yu0MIKE961t74Xf2vVXa2Akh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.metrics.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feat/lindasbranch",
+    "last_opened_file_path": "C:/Users/Markus/Desktop/Data Scientist/2. Pythonprogrammering och Statistisk Dataanalys/2. Projekt/ehandel-grupp7",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a359ae76-9d1e-4339-8e0b-c621647ad499" name="Changes" comment="" />
+      <created>1760609713482</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760609713482</updated>
+    </task>
+    <task id="LOCAL−00001" summary="Added print(&quot;Metrics&quot;) to see if it works on GitHub">
+      <option name="closed" value="true" />
+      <created>1760610048475</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1760610048475</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Added print(&quot;Eccomerce&quot;) to see if it works on GitHub">
+      <option name="closed" value="true" />
+      <created>1760610252319</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1760610252319</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Added print(&quot;Eccomerce&quot;) to see if it works on GitHub">
+      <option name="closed" value="true" />
+      <created>1760622487083</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1760622487083</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Updated .csv file">
+      <option name="closed" value="true" />
+      <created>1760622953829</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1760622953829</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added print(&quot;Metrics&quot;) to see if it works on GitHub" />
+    <MESSAGE value="Added print(&quot;Eccomerce&quot;) to see if it works on GitHub" />
+    <MESSAGE value="Updated .csv file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated .csv file" />
+  </component>
+</project>
