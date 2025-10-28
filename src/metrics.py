@@ -1,3 +1,22 @@
+def top3_categories_by_revenue(df):
+  # Group by category and sum revenue
+  top3 = (
+      df.groupby("category")["revenue"]
+        .sum()
+        .sort_values(ascending=False)
+        .head(3)
+  )
+
+  # Display
+  print("Topp 3 kategorier efter intäkt:")
+  print(top3)
+
+  top3.plot(kind="bar", color="skyblue")
+  plt.title("Topp 3 kategorier efter intäkt")
+  plt.xlabel("Kategori")
+  plt.ylabel("Intäkt (kr)")
+  plt.xticks(rotation=0)
+  plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -50,4 +69,35 @@ plot_revenue_per_city(city_rev_df, mean_revenue, std_revenue)
   
 
 
+
+
+def revenue_by_category(df: pd.DataFrame) -> pd.DataFrame:
+    # räknar ut intäkt per kategori och sorteral från högsta till lägsta
+    result = (df.groupby("category")["revenue"]
+              .sum() # räknar alla intäkt per kategori
+              .reset_index() # görs till en tabell
+              .sort_values("revenue", ascending=False) # sorterar fallande
+              )
+    return result
+
+import io_utils as util
+import pandas as pd
+
+def revMetrics(df, cat):
+    if df.empty:
+        return 0
+    mean = df[cat].mean()
+    median = df[cat].median()
+    std = df[cat].std()
+    q1 = df[cat].quantile(0.25)
+    q3 = df[cat].quantile(0.75)
+    iqr = q3 - q1
+    spread = df[cat].max() - df[cat].min()
+    
+    return mean, median, std, q1, q3, iqr, spread
+
+
+if __name__ == "__main__":
+    orders = util.extract_orders_from_csv()
+    # print("Average Order Value:", revenueSpread(orders))
 
