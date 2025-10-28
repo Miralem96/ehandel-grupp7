@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 import pandas as pd
 
 def revenue_by_category(df: pd.DataFrame) -> pd.DataFrame:
@@ -11,4 +9,4 @@ def revenue_by_category(df: pd.DataFrame) -> pd.DataFrame:
               .sort_values("revenue", ascending=False) # sorterar fallande
               )
     return result
->>>>>>> feat/miralem
+
