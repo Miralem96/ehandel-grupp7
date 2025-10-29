@@ -1,3 +1,4 @@
+
 def top3_categories_by_revenue(df):
   # Group by category and sum revenue
   top3 = (
