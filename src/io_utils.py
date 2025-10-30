@@ -1,4 +1,8 @@
+
+import csv
+import datetime as dt
 import pandas as pd
+import calendar as cal
 
 # läser in i csv filen
 def load_sales(path: str) -> pd.DataFrame:
@@ -9,9 +13,7 @@ def load_sales(path: str) -> pd.DataFrame:
         df["revenue"] = df["price"] * df["units"]
 
     return df
-import csv
-import matplotlib.pyplot as plt
-import datetime as dt
+
 
 # Matches the column name with an index for easy access with some_dict[column["city"]
 column = {"order_id": 0, "date": 1, "city": 2, "category": 3, "price": 4, "units": 5, "revenue": 6}
@@ -55,3 +57,23 @@ sort it by price and descending order with
 def sort_list(_list_to_sort, _category_to_sort_by, _descending_order):
     return sorted(_list_to_sort, key=lambda k: k[column[_category_to_sort_by]], reverse=_descending_order)
 
+
+
+def sort_date_category_units(_df: pd.DataFrame) -> dict:
+    temp_sorted_orders = {}
+
+    # Loop over unique dates and category
+    for date in _df.date.unique():
+        for category in _df.category.unique():
+            cat_units = _df.loc[(_df["date"] == date) &
+                         (_df["category"] == category), "units"].sum()
+            #print(f"Date: {date} {category} units sold {cat_units}") # Debug
+
+            # Check if the date was added. If not, add it.
+            if date not in temp_sorted_orders:
+                temp_sorted_orders[date] = {category: int(cat_units)}
+            # If date was already added. Add order to dict of orders
+            else:
+                temp_sorted_orders[date][category] = int(cat_units)
+
+    return temp_sorted_orders
