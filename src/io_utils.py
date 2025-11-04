@@ -34,7 +34,7 @@ def extract_orders_from_csv():
     # List of tuples containing each order
     temp_orders = []
 
-    with open("..\\data\\ecommerce_sales.csv", "r", encoding="utf-8") as file:
+    with open("../data/ecommerce_sales.csv", "r", encoding="utf-8") as file:
         # Create csv-reader
         reader = csv.DictReader(file)
 

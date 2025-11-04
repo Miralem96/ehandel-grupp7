@@ -4,13 +4,13 @@ from viz import *
 
 # Database everyone will use
 # Read csv file, sort and reset index
-df = pd.read_csv("..\\data\\ecommerce_sales.csv")
+df = pd.read_csv("../data/ecommerce_sales.csv")
 
 
 # Uppgift 1 - MIRALEM
 
 def main():
-    df = pd.read_csv("..\\data\\ecommerce_sales.csv")
+    df = pd.read_csv("../data/ecommerce_sales.csv")
 
     print(type(df))
     df.head()
