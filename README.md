@@ -28,6 +28,8 @@ We were sitting all together when it was time for us to merge all the branches t
 
 How to run:
 
+Have python version 3.13.7
+
 1. Open the project in VS Code or Jupyter.
 2. Make sure you have Python installed.
 3. In the terminal, install the packages:
