@@ -1,6 +1,3 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-
 def top3_categories_by_revenue(df):
   # Group by category and sum revenue
   top3 = (
@@ -20,14 +17,11 @@ def top3_categories_by_revenue(df):
   plt.ylabel("Intäkt (kr)")
   plt.xticks(rotation=0)
   plt.show()
+import pandas as pd
+import matplotlib.pyplot as plt
 
 
-CSV_PATH = "/Users/lindahansson/Desktop/Gruppuppgift_1/data/ecommerce_sales.csv"
-
-df = pd.read_csv(CSV_PATH) 
-df.columns = df.columns.str.strip()  # remove whitepaces
-
-def revenue_per_city(csv_path=CSV_PATH):  # function to calculate total revenue per city
+def revenue_per_city(df):  # function to calculate total revenue per city
     city_revenue = (
         df.groupby('city')['revenue']     # gorup data by city
             .sum()                        # sum revenue values
@@ -60,18 +54,7 @@ def plot_revenue_per_city(city_rev_df, mean_revenue, std_revenue):
     print(city_rev_df)
     print(f"\nMedelintäkt: {mean_revenue:.2f}")
     print(f"Standardavvikelse: {std_revenue:.2f}")   
-    
-city_rev = revenue_per_city()
-city_rev_df = city_rev.reset_index()
-mean_revenue = df['revenue'].mean()
-std_revenue = df['revenue'].std()
-
-plot_revenue_per_city(city_rev_df, mean_revenue, std_revenue)   
-
-  
-
-
-
+     
 
 def revenue_by_category(df: pd.DataFrame) -> pd.DataFrame:
     # räknar ut intäkt per kategori och sorteral från högsta till lägsta
@@ -81,9 +64,6 @@ def revenue_by_category(df: pd.DataFrame) -> pd.DataFrame:
               .sort_values("revenue", ascending=False) # sorterar fallande
               )
     return result
-
-import io_utils as util
-import pandas as pd
 
 def revMetrics(df, cat):
     if df.empty:
@@ -98,8 +78,30 @@ def revMetrics(df, cat):
     
     return mean, median, std, q1, q3, iqr, spread
 
+def revenue_per_capita(df):
+    city_revenue = (df.groupby('city')['revenue'].sum().sort_values(ascending=False))
+    # populations
+    populations = {
+        "Stockholm": 995600,
+        "Göteborg": 609000,
+        "Malmö": 365644,
+        "Uppsala": 248016,
+        "Västerås": 160763
+    }
+
+    city_revenue = pd.Series(city_revenue)
+
+    # Calculate per capita revenue
+    per_capita = pd.Series(
+        {city: city_revenue[city] / populations[city] if city in populations else None
+         for city in city_revenue.index}
+    )
+
+    return per_capita
+
 
 if __name__ == "__main__":
     orders = util.extract_orders_from_csv()
     # print("Average Order Value:", revenueSpread(orders))
+
 
