@@ -1,3 +1,10 @@
+
+import io_utils as util
+import pandas as pd
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+
 def top3_categories_by_revenue(df):
   # Group by category and sum revenue
   top3 = (
@@ -17,8 +24,6 @@ def top3_categories_by_revenue(df):
   plt.ylabel("Intäkt (kr)")
   plt.xticks(rotation=0)
   plt.show()
-import pandas as pd
-import matplotlib.pyplot as plt
 
 
 def revenue_per_city(df):  # function to calculate total revenue per city
